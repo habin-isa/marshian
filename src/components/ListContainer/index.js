@@ -3,7 +3,6 @@ import * as S from './styles';
 
 import ListItem from '../ListItem';
 import { getSpaceData } from '../../services';
-// import { string } from 'prop-types';
 
 const ListContainer = () => {
   const [spaceData, setSpaceData] = useState([]);
@@ -34,7 +33,6 @@ const ListContainer = () => {
 
   return (
     <S.Wrapper>
-      ListContainer
       <S.Tabs>
         <S.Tab active={dragonsActive} onClick={() => handleTabClick('dragons')}>
           Dragons
@@ -49,15 +47,3 @@ const ListContainer = () => {
 };
 
 export default ListContainer;
-
-// If props were drilled into App component
-// E.g. const App = ({ propName, propTwo })
-
-// App.propTypes = {
-//   propName: string,
-//   propTwo: string.isRequired
-// };
-
-// App.defaultProps = {
-//   propName: 'Kimmy'
-// };

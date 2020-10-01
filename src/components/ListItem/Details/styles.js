@@ -23,7 +23,7 @@ export const CardContainer = styled.div`
 export const Figure = styled.h2`
   font-weight: bold;
   font-size: 22px;
-  color: #ec5272;
+  color: #ee6f78;
   margin-right: 5px;
 `;
 

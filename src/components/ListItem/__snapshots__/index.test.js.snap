@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component renders with correct data 1`] = `
+<div
+  class="sc-bdnylx mIRxC"
+>
+  <div
+    class="sc-gtssRu cXtQAK"
+  >
+    <div
+      class="sc-dlnjPT bHESxQ"
+    >
+      <img
+        class="sc-hKFyIo hmcCbS"
+        src="https://i.imgur.com/9fWdwNv.jpg"
+      />
+      <div
+        class="sc-eCApGN eYskGV"
+      >
+        <div
+          class="sc-jSFkmK gMinZq"
+        >
+          Dragon 1
+        </div>
+        <span
+          class="sc-iCoHVE kJKVjK"
+        >
+          First flight: 
+          2006-08-17
+        </span>
+      </div>
+      <img
+        class="sc-gKAblj sfmgn"
+        src="active.png"
+      />
+    </div>
+    <div
+      class="sc-fujyUd jnFYcx"
+    >
+      <div
+        class="sc-jrsJCI bcGbNu"
+      >
+        <img
+          class="sc-pNWxx lQFdD"
+          src="capsule.png"
+        />
+        Capsule
+      </div>
+      <div
+        class="sc-jrsJCI bcGbNu"
+      >
+        <img
+          class="sc-pNWxx lQFdD"
+          src="crew.png"
+        />
+        Crew capacity: 
+        0
+      </div>
+    </div>
+  </div>
+  <div />
+</div>
+`;

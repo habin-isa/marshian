@@ -1,12 +1,14 @@
 import React from 'react';
 import * as S from './styles';
+import PageTitle from '../components/PageTitle';
 import ListContainer from '../components/ListContainer';
 // import { string } from 'prop-types';
 
 const App = () => {
   return (
     <S.Wrapper>
-      Marshian <ListContainer />
+      <PageTitle />
+      <ListContainer />
     </S.Wrapper>
   );
 };

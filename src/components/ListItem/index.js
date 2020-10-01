@@ -67,9 +67,10 @@ export default ListItem;
 
 ListItem.propTypes = {
   vessel: object,
-  dragonsActive: bool.isRequired
+  dragonsActive: bool
 };
 
 ListItem.defaultProps = {
-  vessel: {}
+  vessel: {},
+  dragonsActive: true
 };

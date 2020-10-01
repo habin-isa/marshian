@@ -36,6 +36,9 @@ export const TopContainer = styled.div`
   margin: 10px;
   height: 140px;
   width: 350px;
+  @media screen and (max-width: 416px) {
+    width: 300px;
+  }
   padding: 1.5em 2em;
   justify-content: space-between;
   &:hover {

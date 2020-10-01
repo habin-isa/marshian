@@ -6,7 +6,10 @@ import { object, bool } from 'prop-types';
 const Details = ({ vessel, dragonsActive }) => {
   return (
     <div>
-      <S.Description>{vessel.description}</S.Description>
+      <S.Description>
+        {vessel.description}
+        {vessel.active === true ? ' (Active)' : ' (Inactive)'}
+      </S.Description>
       <S.Image src={vessel.flickr_images[0]} alt={vessel.id} />
       <S.Image src={vessel.flickr_images[1]} alt={vessel.id} />
       <S.CardContainer>

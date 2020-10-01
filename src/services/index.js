@@ -9,6 +9,5 @@ const url = 'https://api.spacexdata.com/v3/';
 
 export const getSpaceData = async (params) => {
   const response = await axios.get(url + params);
-  console.log('data', response.data);
   return response;
 };
