@@ -6,7 +6,7 @@ import ListContainer from '../components/ListContainer';
 const App = () => {
   return (
     <S.Wrapper>
-      MARSHIAN <ListContainer />
+      Marshian <ListContainer />
     </S.Wrapper>
   );
 };
