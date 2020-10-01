@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
 	// animation: ${fadeIn} 500ms ease-in;
   // transition: visibility 500ms ease-in;
   letter-spacing: 1px;
+  position: relative;
 `;
 
 export const TopContainer = styled.div`
@@ -33,12 +34,14 @@ export const TopContainer = styled.div`
   flex-direction: column;
   background-color: #f8f9fa;
   margin: 10px;
-  width: fit-content;
-  height: fit-content;
-  min-height: 130px;
-  min-width: 350px;
-  padding: 2em;
+  height: 140px;
+  width: 350px;
+  padding: 1.5em 2em;
   justify-content: space-between;
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
 `;
 
 export const Container = styled.div`
@@ -73,7 +76,7 @@ export const Icon = styled.img`
 export const Subtitle = styled.span`
   text-transform: capitalize;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 12px;
   color: #828282;
 `;
 
@@ -107,4 +110,42 @@ export const Tag = styled.div`
   padding: 2px 10px;
   font-size: 12px;
   margin: 10px;
+`;
+
+export const DetailsContainer = styled.div`
+  background: white;
+  position: absolute;
+  min-height: 130px;
+  width: 350px;
+  padding: 2em;
+  top: 200px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const LinkContainer = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  height: 35px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid #f2f2f2;
+  color: #828282;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  min-width: 45%;
+  width: fit-content;
+  justify-content: center;
+  padding: 2px 10px;
+  font-size: 12px;
+  margin: 10px;
+  &:hover {
+    opacity: 0.8;
+  }
 `;

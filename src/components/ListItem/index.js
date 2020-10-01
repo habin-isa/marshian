@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
+import Details from './Details';
+
 import ActiveIcon from '../../assets/active.png';
 import InactiveIcon from '../../assets/inactive.png';
 import CapsuleIcon from '../../assets/capsule.png';
 import CrewIcon from '../../assets/crew.png';
 import PercentageIcon from '../../assets/percentage.png';
 import MoneyIcon from '../../assets/money.png';
+import WikiIcon from '../../assets/wikipedia.png';
 import { object, bool } from 'prop-types';
 
 const ListItem = ({ vessel, dragonsActive }) => {
+  const [showDetails, setShowDetails] = useState(false);
   return (
     <S.Wrapper>
-      <S.TopContainer>
+      <S.TopContainer onClick={() => setShowDetails(!showDetails)}>
         <S.Container>
           <S.VesselImg src={vessel.flickr_images[0]} />
           <S.TitleContainer>
@@ -44,6 +48,17 @@ const ListItem = ({ vessel, dragonsActive }) => {
           )}
         </S.TagsContainer>
       </S.TopContainer>
+      {showDetails === true ? (
+        <S.DetailsContainer>
+          <Details vessel={vessel} dragonsActive={dragonsActive} />
+          <S.LinkContainer href={vessel.wikipedia}>
+            <S.TagIcon src={WikiIcon} alt="wikipedia-icon" />
+            <div>Wikipedia</div>
+          </S.LinkContainer>
+        </S.DetailsContainer>
+      ) : (
+        <div />
+      )}
     </S.Wrapper>
   );
 };
