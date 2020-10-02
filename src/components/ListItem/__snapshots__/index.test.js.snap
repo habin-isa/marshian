@@ -2,7 +2,7 @@
 
 exports[`ListItem component renders with correct data 1`] = `
 <div
-  class="sc-bdnylx bHzjGh"
+  class="sc-bdnylx kmqOTi"
 >
   <div
     class="sc-gtssRu UdvtO"
@@ -30,7 +30,7 @@ exports[`ListItem component renders with correct data 1`] = `
             Dragon 1
           </div>
           <span
-            class="sc-jrsJCI dSoJwe"
+            class="sc-jrsJCI gmORVQ"
           >
             First flight: 
             2006-08-17
@@ -46,7 +46,7 @@ exports[`ListItem component renders with correct data 1`] = `
       class="sc-kEqYlL bIqnmr"
     >
       <div
-        class="sc-crzoUp diMuj"
+        class="sc-crzoUp bsiZmG"
       >
         <img
           class="sc-iqAbSa eFdxua"
@@ -55,7 +55,7 @@ exports[`ListItem component renders with correct data 1`] = `
         Capsule
       </div>
       <div
-        class="sc-crzoUp diMuj"
+        class="sc-crzoUp bsiZmG"
       >
         <img
           class="sc-iqAbSa eFdxua"

@@ -10,7 +10,7 @@ import PercentageIcon from '../../assets/percentage.png';
 import MoneyIcon from '../../assets/money.png';
 import emptyLikeIcon from '../../assets/empty-like.svg';
 import fullLikeIcon from '../../assets/full-like.svg';
-import { object, bool } from 'prop-types';
+import { object, bool, func } from 'prop-types';
 
 const ListItem = ({ vessel, dragonsActive, handleLikeCount, handleLikeTitle }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -97,10 +97,14 @@ export default ListItem;
 
 ListItem.propTypes = {
   vessel: object,
-  dragonsActive: bool
+  dragonsActive: bool,
+  handleLikeCount: func,
+  handleLikeTitle: func
 };
 
 ListItem.defaultProps = {
   vessel: {},
-  dragonsActive: true
+  dragonsActive: true,
+  handleLikeCount: () => {},
+  handleLikeTitle: () => {}
 };

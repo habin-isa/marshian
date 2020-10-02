@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 import CrossIcon from '../../assets/close.svg';
-import { object, func } from 'prop-types';
+import { func } from 'prop-types';
 
 const Notification = ({ removeNotification }) => {
   return (
@@ -24,11 +24,9 @@ const Notification = ({ removeNotification }) => {
 export default Notification;
 
 Notification.propTypes = {
-  user: object,
   removeNotification: func
 };
 
 Notification.defaultProps = {
-  user: {},
   removeNotification: () => {}
 };

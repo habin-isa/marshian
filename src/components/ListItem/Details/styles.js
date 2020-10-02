@@ -29,12 +29,9 @@ export const Wrapper = styled.div`
 
 export const Description = styled.div`
   color: #112035;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   text-align: justify;
-  @media screen and (max-width: 390px) {
-    font-size: 9px;
-  }
 `;
 
 export const Image = styled.img`
@@ -66,14 +63,13 @@ export const Card = styled.div`
   text-align: center;
   color: #112035;
   font-weight: 400;
-  font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100px;
   padding: 3em;
   justify-content: flex-end;
-  font-size: 10px;
+  font-size: 12px;
   margin: 10px;
 `;
 

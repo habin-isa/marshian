@@ -16,7 +16,7 @@ export const HeartContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 12px;
 `;
 
 export const HeartIcon = styled.img`

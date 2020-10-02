@@ -5,13 +5,13 @@ import WikiIcon from '../../../assets/wikipedia.png';
 import { object, bool, func } from 'prop-types';
 
 const Details = ({ vessel, dragonsActive, handleCaret }) => {
+  const renderedImages = () => vessel.flickr_images.map((image, i) => <S.Image src={image} key={i} alt={vessel.id} />);
   return (
     <S.Wrapper>
       <S.Description>
         {vessel.active === true ? ' Active ' : ' Inactive '}- {vessel.description}
       </S.Description>
-      <S.Image src={vessel.flickr_images[0]} alt={vessel.id} />
-      <S.Image src={vessel.flickr_images[1]} alt={vessel.id} />
+      {renderedImages()}
       <S.CardContainer>
         {dragonsActive === true ? (
           <S.Card>

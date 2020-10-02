@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    visibility: none;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -11,6 +23,8 @@ export const Wrapper = styled.div`
   letter-spacing: 0.5px;
   position: relative;
   width: 100%;
+  animation: ${fadeIn} 600ms ease-in;
+  transition: ${fadeIn} visibility 600ms ease-in;
 `;
 
 export const TopContainer = styled.div`
@@ -104,9 +118,6 @@ export const Icon = styled.img`
 export const Subtitle = styled.span`
   text-transform: capitalize;
   font-size: 12px;
-  @media screen and (max-width: 390px) {
-    font-size: 10px;
-  }
 `;
 
 export const TagsContainer = styled.div`
@@ -135,9 +146,9 @@ export const Tag = styled.div`
   padding: 0.1em 1em;
   font-size: 12px;
   @media screen and (max-width: 390px) {
-    font-size: 8px;
     height: 20px;
     paddng: 0.1em;
+    font-size: 10px;
   }
   @media screen and (max-width: 280px) {
     height: fit-content;

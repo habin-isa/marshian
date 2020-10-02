@@ -6,13 +6,7 @@ exports[`Notification component renders without crashing 1`] = `
 >
   <div
     class="sc-eCApGN hCdAiT"
-  >
-    <img
-      alt="arrow-down-icon"
-      class="sc-gKAblj bbjA-Ds"
-      src="down.png"
-    />
-  </div>
+  />
   <div
     class="sc-gtssRu bMBAbX"
   >
@@ -22,7 +16,7 @@ exports[`Notification component renders without crashing 1`] = `
       Hey there!
     </span>
     <span
-      class="sc-hKFyIo ETJmw"
+      class="sc-hKFyIo DMNNq"
     >
       Welcome to Marshian, we hit the SpaceX API to cater your spacecraft needs. Please filter between 'Dragons' or 'Rockets', clicking on the card will show more details.
     </span>

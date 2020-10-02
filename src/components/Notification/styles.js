@@ -57,7 +57,7 @@ export const Subtitle = styled.span`
   line-height: 17px;
   color: #636674;
   @media screen and (max-width: 430px) {
-    font-size: 9px;
+    font-size: 12px;
     line-height: 10px;
   }
 `;
