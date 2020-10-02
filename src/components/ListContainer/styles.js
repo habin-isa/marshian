@@ -15,8 +15,8 @@ export const Instructions = styled.h1`
 export const HeartContainer = styled.div`
   display: flex;
   align-items: center;
-  font-family: 'Roboto Mono', monospace;
   justify-content: center;
+  font-size: 11px;
 `;
 
 export const HeartIcon = styled.img`
@@ -32,7 +32,7 @@ export const Tabs = styled.div`
 export const Tab = styled.div`
   height: 40px;
   color: white;
-  background-color: #ee6f78;
+  background-color: #ff4e75;
   cursor: pointer;
   margin: 10px;
   border-radius: 50px;

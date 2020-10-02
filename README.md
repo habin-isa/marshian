@@ -7,13 +7,27 @@
 - \$ git clone https://github.com/habin-isa/marshian.git
 - \$ cd marshian
 - \$ yarn
-- \$ yarn start
+- \$ yarn run dev
 
-### Examples contained
+- \$ yarn test
 
-- Styled components
-- Jest testing
-- Proptypes
+## Features
+
+- Fetches and renders list of rockets or dragons from SpaceX's API
+- OnClick shows extended info about list item (description, stats, images, wikipedia link) in a scrollable box
+- Tabs to toggle between rockets or dragons
+- Grid representation of list items
+- User can like items
+- User can see total like count
+- Custom favicon with branding
+- Responsive styling
+- Deployed with Express to Heroku
+
+### Use the app
+
+https://marshian.herokuapp.com/
+
+![alt text](/src/assets/preview.png 'Marshian preview')
 
 ### Tech
 
@@ -22,4 +36,6 @@
 - Styled components
 - Jest
 - Axios
-- Babel/EsLint
+- Babel
+- Eslint
+- Express

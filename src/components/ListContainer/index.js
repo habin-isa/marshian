@@ -73,7 +73,7 @@ const ListContainer = () => {
       </S.Tabs>
       <S.HeartContainer>
         <S.HeartIcon src={LikeIcon} alt="like-icon" />
-        {likeCount} likes
+        {likeCount} {likeCount > 0 ? 'likes' : 'like'}
       </S.HeartContainer>
       {spaceData.length > 0 && <div>{renderedVessels()}</div>}
     </S.Wrapper>
