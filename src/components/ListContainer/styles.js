@@ -17,6 +17,9 @@ export const Instructions = styled.h1`
   text-align: center;
   margin-bottom: 10px;
   color: #112035;
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 export const HeartContainer = styled.div`
