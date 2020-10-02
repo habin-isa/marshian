@@ -9,7 +9,14 @@ export const Wrapper = styled.div`
 `;
 
 export const Instructions = styled.h1`
-  font-family: 'Roboto Mono', monospace;
+  max-width: 530px;
+  margin-bottom: 8px;
+  font-size: 52px;
+  line-height: 120%;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #112035;
 `;
 
 export const HeartContainer = styled.div`

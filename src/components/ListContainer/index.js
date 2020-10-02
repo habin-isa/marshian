@@ -63,6 +63,10 @@ const ListContainer = () => {
     <S.Wrapper>
       {showNotification === true && <Notification removeNotification={removeNotification} />}
       <S.Instructions>Filter results by clicking on tabs:</S.Instructions>
+      <S.HeartContainer>
+        <S.HeartIcon src={LikeIcon} alt="like-icon" />
+        {likeCount} {likeCount === 1 ? 'like' : 'likes'}
+      </S.HeartContainer>
       <S.Tabs>
         <S.Tab active={dragonsActive} onClick={() => handleTabClick('dragons')}>
           Dragons
@@ -71,10 +75,6 @@ const ListContainer = () => {
           Rockets
         </S.Tab>
       </S.Tabs>
-      <S.HeartContainer>
-        <S.HeartIcon src={LikeIcon} alt="like-icon" />
-        {likeCount} {likeCount > 0 ? 'likes' : 'like'}
-      </S.HeartContainer>
       {spaceData.length > 0 && <div>{renderedVessels()}</div>}
     </S.Wrapper>
   );
