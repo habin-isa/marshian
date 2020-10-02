@@ -1,14 +1,14 @@
 import React from 'react';
 import * as S from './styles';
 
-import { object, bool } from 'prop-types';
+import WikiIcon from '../../../assets/wikipedia.png';
+import { object, bool, func } from 'prop-types';
 
-const Details = ({ vessel, dragonsActive }) => {
+const Details = ({ vessel, dragonsActive, handleCaret }) => {
   return (
-    <div>
+    <S.Wrapper>
       <S.Description>
-        {vessel.description}
-        {vessel.active === true ? ' (Active)' : ' (Inactive)'}
+        {vessel.active === true ? ' Active ' : ' Inactive '}- {vessel.description}
       </S.Description>
       <S.Image src={vessel.flickr_images[0]} alt={vessel.id} />
       <S.Image src={vessel.flickr_images[1]} alt={vessel.id} />
@@ -52,7 +52,12 @@ const Details = ({ vessel, dragonsActive }) => {
           </S.Card>
         )}
       </S.CardContainer>
-    </div>
+      <S.LinkContainer href={vessel.wikipedia}>
+        <S.TagIcon src={WikiIcon} alt="wikipedia-icon" />
+        <div>Wikipedia</div>
+      </S.LinkContainer>
+      <S.Caret onClick={handleCaret}>▲</S.Caret>
+    </S.Wrapper>
   );
 };
 
@@ -60,9 +65,11 @@ export default Details;
 
 Details.propTypes = {
   vessel: object,
-  dragonsActive: bool.isRequired
+  dragonsActive: bool.isRequired,
+  handleCaret: func
 };
 
 Details.defaultProps = {
-  vessel: {}
+  vessel: {},
+  handleCaret: () => {}
 };

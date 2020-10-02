@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification component renders without crashing 1`] = `
+<div
+  class="sc-bdnylx gvncCt"
+>
+  <div
+    class="sc-eCApGN hCdAiT"
+  >
+    <img
+      alt="arrow-down-icon"
+      class="sc-gKAblj bbjA-Ds"
+      src="down.png"
+    />
+  </div>
+  <div
+    class="sc-gtssRu bMBAbX"
+  >
+    <span
+      class="sc-dlnjPT bLahkL"
+    >
+      Hey there!
+    </span>
+    <span
+      class="sc-hKFyIo ETJmw"
+    >
+      Welcome to Marshian, we hit the SpaceX API to cater your spacecraft needs. Please filter between 'Dragons' or 'Rockets', clicking on the card will show more details.
+    </span>
+  </div>
+  <div
+    class="sc-eCApGN hCdAiT"
+  >
+    <img
+      alt="cross-icon"
+      class="sc-jSFkmK gdTyUL"
+      src="close.svg"
+    />
+  </div>
+</div>
+`;

@@ -2,62 +2,74 @@
 
 exports[`ListItem component renders with correct data 1`] = `
 <div
-  class="sc-bdnylx mIRxC"
+  class="sc-bdnylx bHzjGh"
 >
   <div
-    class="sc-gtssRu cXtQAK"
+    class="sc-gtssRu UdvtO"
   >
+    <img
+      class="sc-dlnjPT hmUByI"
+      src="empty-like.svg"
+    />
     <div
-      class="sc-dlnjPT bHESxQ"
+      class="sc-eCApGN bPMHXf"
     >
-      <img
-        class="sc-hKFyIo hmcCbS"
-        src="https://i.imgur.com/9fWdwNv.jpg"
-      />
       <div
-        class="sc-eCApGN eYskGV"
+        class="sc-gKAblj fvRAFo"
       >
+        <img
+          class="sc-jSFkmK dJVBbN"
+          src="https://i.imgur.com/9fWdwNv.jpg"
+        />
         <div
-          class="sc-jSFkmK gMinZq"
+          class="sc-iCoHVE fzJoXs"
         >
-          Dragon 1
+          <div
+            class="sc-fujyUd gTvrPJ"
+          >
+            Dragon 1
+          </div>
+          <span
+            class="sc-jrsJCI dSoJwe"
+          >
+            First flight: 
+            2006-08-17
+          </span>
         </div>
-        <span
-          class="sc-iCoHVE kJKVjK"
-        >
-          First flight: 
-          2006-08-17
-        </span>
       </div>
       <img
-        class="sc-gKAblj sfmgn"
+        class="sc-pNWxx pkHpR"
         src="active.png"
       />
     </div>
     <div
-      class="sc-fujyUd jnFYcx"
+      class="sc-kEqYlL bIqnmr"
     >
       <div
-        class="sc-jrsJCI bcGbNu"
+        class="sc-crzoUp diMuj"
       >
         <img
-          class="sc-pNWxx lQFdD"
+          class="sc-iqAbSa eFdxua"
           src="capsule.png"
         />
         Capsule
       </div>
       <div
-        class="sc-jrsJCI bcGbNu"
+        class="sc-crzoUp diMuj"
       >
         <img
-          class="sc-pNWxx lQFdD"
+          class="sc-iqAbSa eFdxua"
           src="crew.png"
         />
         Crew capacity: 
         0
       </div>
+      <div
+        class="sc-hKFyIo eYxpGW"
+      >
+        ▼
+      </div>
     </div>
   </div>
-  <div />
 </div>
 `;

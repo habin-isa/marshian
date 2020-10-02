@@ -1,12 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import * as S from './styles';
 
+import LikeIcon from '../../assets/full-like.svg';
+import Notification from '../Notification';
 import ListItem from '../ListItem';
 import { getSpaceData } from '../../services';
+import { func } from 'prop-types';
 
-const ListContainer = () => {
+const ListContainer = ({ handleArrowClick }) => {
   const [spaceData, setSpaceData] = useState([]);
   const [dragonsActive, setDragonsActive] = useState(true);
+  const [showNotification, setShowNotification] = useState(true);
+  const [likeCount, setLikeCount] = useState(0);
+  const [likedList, setLikedList] = useState([]);
 
   const loadSpaceData = useCallback(async (params) => {
     try {
@@ -17,7 +23,7 @@ const ListContainer = () => {
     } finally {
       console.log('loadSpaceData has completed for', params);
     }
-  });
+  }, []);
 
   useEffect(() => {
     loadSpaceData('dragons');
@@ -29,10 +35,37 @@ const ListContainer = () => {
   };
 
   const renderedVessels = () =>
-    spaceData.map((vessel, i) => <ListItem vessel={vessel} key={i} dragonsActive={dragonsActive} />);
+    spaceData.map((vessel, i) => (
+      <ListItem
+        vessel={vessel}
+        key={i}
+        dragonsActive={dragonsActive}
+        handleLikeCount={handleLikeCount}
+        handleLikeTitle={handleLikeTitle}
+      />
+    ));
+
+  const removeNotification = () => {
+    setShowNotification(false);
+  };
+
+  const handleLikeCount = (val) => {
+    setLikeCount(likeCount + val);
+  };
+
+  const handleLikeTitle = (title, id) => {
+    const trimmedLikeTitle = title.trim();
+    if (trimmedLikeTitle.length > 0) {
+      setLikedList([...likedList, trimmedLikeTitle]);
+    }
+  };
 
   return (
     <S.Wrapper>
+      {showNotification === true && (
+        <Notification removeNotification={removeNotification} handleArrowClick={handleArrowClick} />
+      )}
+      <S.Instructions>Filter results by clicking on tabs:</S.Instructions>
       <S.Tabs>
         <S.Tab active={dragonsActive} onClick={() => handleTabClick('dragons')}>
           Dragons
@@ -41,9 +74,21 @@ const ListContainer = () => {
           Rockets
         </S.Tab>
       </S.Tabs>
-      {spaceData.length > 0 ? <div>{renderedVessels()}</div> : <div />}
+      <S.HeartContainer>
+        <S.HeartIcon src={LikeIcon} alt="like-icon" />
+        {likeCount} likes
+      </S.HeartContainer>
+      {spaceData.length > 0 && <div>{renderedVessels()}</div>}
     </S.Wrapper>
   );
 };
 
 export default ListContainer;
+
+ListContainer.propTypes = {
+  handleArrowClick: func
+};
+
+ListContainer.defaultProps = {
+  handleArrowClick: () => {}
+};

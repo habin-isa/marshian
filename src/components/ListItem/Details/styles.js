@@ -1,16 +1,49 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  width: 388px;
+  // width: 100%
+  border: 6px solid #112035;
+  height: 300px;
+  overflow: scroll;
+  padding: 50px 35px 30px 35px;
+  position: relative;
+  top: -27px;
+  border-radius: 16px;
+  overflow: scroll;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 600px) {
+    width: 288px;
+  }
+  @media screen and (max-width: 390px) {
+    height: 90px;
+    width: 218px;
+  }
+  @media screen and (max-width: 280px) {
+    height: 130px;
+    width: 170px;
+  }
+`;
+
 export const Description = styled.div`
-  color: #828282;
+  color: #112035;
   font-size: 11px;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   text-align: justify;
+  @media screen and (max-width: 390px) {
+    font-size: 9px;
+  }
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: auto;
-  padding: 20px 0 0px 0px;
+  width: 20em;
+  margin: 1em;
+  @media screen and (max-width: 390px) {
+    width: 10em;
+    margin: 5px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -22,24 +55,59 @@ export const CardContainer = styled.div`
 
 export const Figure = styled.h2`
   font-weight: bold;
-  font-size: 22px;
-  color: #ee6f78;
+  font-size: 16px;
+  color: #ff4e75;
   margin-right: 5px;
 `;
 
 export const Card = styled.div`
   background-color: #f8f9fa;
-  height: 300px;
+  height: 150px;
   text-align: center;
-  color: #828282;
+  color: #112035;
   font-weight: 400;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100px;
-  padding: 1em;
-  justify-content: space-evenly;
+  padding: 3em;
+  justify-content: flex-end;
+  font-size: 10px;
+  margin: 10px;
+`;
+
+export const LinkContainer = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 35px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  background-color: #112035;
+  font-size: 14px;
+  width: fit-content;
+  justify-content: center;
+  padding: 2px 20px;
   font-size: 12px;
   margin: 10px;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+export const TagIcon = styled.img`
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`;
+
+export const Caret = styled.div`
+  text-align: center;
+  color: #ff4e75;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `;

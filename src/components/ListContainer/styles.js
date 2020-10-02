@@ -8,17 +8,39 @@ export const Wrapper = styled.div`
   padding-top: 5%;
 `;
 
+export const Instructions = styled.h1`
+  font-family: 'Roboto Mono', monospace;
+`;
+
+export const HeartContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+  justify-content: center;
+`;
+
+export const HeartIcon = styled.img`
+  width: 20px;
+  margin-right: 5px;
+`;
+
 export const Tabs = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
 export const Tab = styled.div`
-  height: 60px;
-  width: fit-content;
+  height: 40px;
   color: white;
-  border: solid 6px white;
+  background-color: #ee6f78;
+  cursor: pointer;
+  margin: 10px;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 15%;
+  cusor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `;

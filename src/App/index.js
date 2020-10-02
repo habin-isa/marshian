@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
-import PageTitle from '../components/PageTitle';
+
+// import ReactPageScroller from 'react-page-scroller';
+import TitleContainer from '../components/TitleContainer';
 import ListContainer from '../components/ListContainer';
-// import { string } from 'prop-types';
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState(null);
+
+  const handlePageChange = (number) => {
+    setCurrentPage(number);
+  };
+
   return (
     <S.Wrapper>
-      <PageTitle />
-      <ListContainer />
+      {/* <React.Fragment>
+        <ReactPageScroller pageOnChange={handlePageChange} customPageNumber={currentPage}> */}
+      <TitleContainer handleButtonClick={() => handlePageChange(1)} />
+      <ListContainer handleArrowClick={() => handlePageChange(1)} />
+      {/* </ReactPageScroller> */}
+      {/* </React.Fragment> */}
     </S.Wrapper>
   );
 };
 
 export default App;
-
-// If props were drilled into App component
-// E.g. const App = ({ propName, propTwo })
-
-// App.propTypes = {
-//   propName: string,
-//   propTwo: string.isRequired
-// };
-
-// App.defaultProps = {
-//   propName: 'Kimmy'
-// };
