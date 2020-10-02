@@ -54,7 +54,7 @@ const ListItem = ({ vessel, dragonsActive, handleLikeCount, handleLikeTitle }) =
           </S.TitleContainer>
           <S.Icon src={vessel.active ? ActiveIcon : InactiveIcon} />
         </S.Container>
-        <S.TagsContainer>
+        <S.TagsContainer onClick={() => setShowDetails(!showDetails)}>
           {dragonsActive === true ? (
             <S.Tag>
               <S.TagIcon src={CapsuleIcon} />

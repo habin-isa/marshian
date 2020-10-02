@@ -45,7 +45,8 @@ export const TextContainer = styled.div`
   letter-spacing: 0.5px;
 `;
 
-export const Button = styled.button`
+export const LinkBox = styled.a`
+  text-decoration: none;
   background-color: #ff4e75;
   color: #fff;
   border-radius: 8px;

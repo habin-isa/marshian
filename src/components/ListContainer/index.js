@@ -5,9 +5,8 @@ import LikeIcon from '../../assets/full-like.svg';
 import Notification from '../Notification';
 import ListItem from '../ListItem';
 import { getSpaceData } from '../../services';
-import { func } from 'prop-types';
 
-const ListContainer = ({ handleArrowClick }) => {
+const ListContainer = () => {
   const [spaceData, setSpaceData] = useState([]);
   const [dragonsActive, setDragonsActive] = useState(true);
   const [showNotification, setShowNotification] = useState(true);
@@ -62,9 +61,7 @@ const ListContainer = ({ handleArrowClick }) => {
 
   return (
     <S.Wrapper>
-      {showNotification === true && (
-        <Notification removeNotification={removeNotification} handleArrowClick={handleArrowClick} />
-      )}
+      {showNotification === true && <Notification removeNotification={removeNotification} />}
       <S.Instructions>Filter results by clicking on tabs:</S.Instructions>
       <S.Tabs>
         <S.Tab active={dragonsActive} onClick={() => handleTabClick('dragons')}>
@@ -84,11 +81,3 @@ const ListContainer = ({ handleArrowClick }) => {
 };
 
 export default ListContainer;
-
-ListContainer.propTypes = {
-  handleArrowClick: func
-};
-
-ListContainer.defaultProps = {
-  handleArrowClick: () => {}
-};

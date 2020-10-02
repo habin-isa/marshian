@@ -3,7 +3,7 @@ import * as S from './styles';
 
 import UfoImg from '../../assets/ufo.png';
 
-const TitleContainer = ({ handleButtonClick }) => {
+const TitleContainer = () => {
   const githubUrl = 'https://github.com/habin-isa/marshian';
   return (
     <S.Wrapper>
@@ -15,7 +15,7 @@ const TitleContainer = ({ handleButtonClick }) => {
         <S.TextContainer>
           <S.Title>The smart way to buy spacecraft insurance</S.Title>
           <S.Subtitle>Everything you need to know for your first capsule cover</S.Subtitle>
-          <S.Button onClick={handleButtonClick}>Prepare for lift off</S.Button>
+          <S.LinkBox href="https://docs.spacexdata.com/">Browse API before lift off</S.LinkBox>
         </S.TextContainer>
         <S.Image src={UfoImg} alt="ufo-img" />
       </S.Container>

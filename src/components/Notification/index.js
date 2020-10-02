@@ -1,15 +1,12 @@
 import React from 'react';
 import * as S from './styles';
 import CrossIcon from '../../assets/close.svg';
-import ArrowDown from '../../assets/down.png';
 import { object, func } from 'prop-types';
 
-const Notification = ({ removeNotification, handleArrowClick }) => {
+const Notification = ({ removeNotification }) => {
   return (
     <S.Wrapper>
-      <S.IconContainer>
-        <S.ArrowIcon src={ArrowDown} alt="arrow-down-icon" onClick={handleArrowClick} />
-      </S.IconContainer>
+      <S.IconContainer></S.IconContainer>
       <S.TextContainer>
         <S.Title>Hey there!</S.Title>
         <S.Subtitle>
